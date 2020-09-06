@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "lacarte-project",
+  "private_key_id": "7fbc119f98aa268a3aa6610fda04db93e9a4763a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCw7aGn1osVSdtX\n3FSehNFdxyjOPNNsHa0JCCw1zrByMOz987TMRKdI5cle2YYHCDH24yP+a9huXDjx\nOOPg7+trZpUAFEctoCnpKEktlsItBTzALUpz/AzbMmzKgLm5tEYImI+ryDIOT+dM\n28bMh71WJIbYGEk5rJV7xEhHvXwMjKBHw6VICXf4mRXjATvgHHfDoCy3ETXQDre7\nANv9uphG59IOz80Ucp8jsZyL9R+3FKgQCrpz22psPAVhG9C3WLhTHr0GcSHxgWJE\nnedhOvnVQ0ZiU5zSNksu/nU2fqizlpF4RK3vjP042AWU2bIg8k/Hm5eI4NjdSq8s\nmlKodbUTAgMBAAECggEAGkWW+QirC2S1rNS7PfSj8CRoI0O18zpu3MX5Zp4D5ljs\ngAMlqCVTn8f7QFnVhIrLfIka6acS8sQ/8lXLxLVrhD2tx167eQNs5cHFJ/9YYv4B\nmNnA0fst34ibzfASZAhoU9Nvlgb6o9RqmKeT3AAV9cojucfVa7p8Ue4B+6Ef3+7s\nhJ3lbBsq1Ll4EA+G/6mz+DtK7GMsB/qbGua/sxlAbZUC75xWY/r0DHF+t1Xb5Pks\no8x2zc+mr2Yv+tM/y5l5MBpzTrMxmljpOkAEwnznT2jzyHYoXp22Xr/J1w7yOFX7\n3T2OhEvMHeQelam1LyR0Ia8YVdvBfYQvqQjNmLQ3MQKBgQDeKnI3C3eElBY+YqAm\nFUQv5w9/yefUlFcPQiEbMDNVh1nuyLq66DXPuMm09cKU7MkaCO2lobk5atln5CS7\nCT476ORW4xJX23SGYZI90XPknUqlvxEKT2RPg9LXiFMKbkquE5KRNZkNKuFG/gHZ\n9vo5kn7zrgqmgN/a4VnvmiYwIwKBgQDL34N9kriR8ZWDATmp3ZvuNhrfJ1KJx87i\nZgQojxrP7O8rCMFMaBoIUiaFzCL2d2bvy8OIKrVIiPwJb5G5Js2PCa4mLvwHCWw+\nYv44NR8sx+Y7+pXgL7dmoZPaNxm1n4+spNvknm2esoDyBhkZ66iv4qlxs/rYbPj1\nK8pEoeg+UQKBgFsyJUw/IsKDX1Ygegjn9eOL/6q/ILD8a3hR9vEIKipTszD3qN8M\nbvpjqjjkIQms4SgUviidaEEPgUrKNeGo+6jwArs/3sm9xelbqAJENkSD5J6A/eez\ni0Owox3iUeQYPgOS+TkuPTNQhMT1g6ELZs+3OPGiYbDTehCJLLfUGRTtAoGAUEPd\ndvDu7baZUIyI8VGodG6kwbqvikM6NnRHqtg8jCQSPXUi9Tv/E8uUExU9pp93zW0B\nvHhkCvyzjdt5GdYnE+uRvsK8wuB4108OG37+mRjSkkaj/zGKGUP/++e5nYIGhMgb\nMrUVH2fT0HWKKGRZc3XflD5xwgeVNKFa7w53ayECgYEAqAouctGeV9DIYIvY7zYv\n9NUM08jVs0XRwsPN8U/UJYEsNMwQ2Z6GeOqs2u/Z5wZV17AmN0sccZZ5+5IqQEOh\nOmn2Mr15rTMJn+/OVrGzw5FkKiwebCda7Bcwcywq76bmJGaHeZE9j8xv7XvJxtrI\nk8KKedK/fTxuMk2T1QhU/CY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "lacarteocr@lacarte-project.iam.gserviceaccount.com",
+  "client_id": "113132382426588344278",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lacarteocr%40lacarte-project.iam.gserviceaccount.com"
+}
