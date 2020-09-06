@@ -30,7 +30,9 @@ const replaceToNumber = (txt) => {
 
 module.exports.ocr = async (req, res, next) => {
   const image = req.file
+  console.log('image', image)
   const client = new vision.ImageAnnotatorClient();
+  console.log('client', client)
   try {
     if (!image) throw 'no have image'
     const [result = {}] = await client.documentTextDetection(image.path);
