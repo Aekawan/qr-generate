@@ -86,6 +86,7 @@ module.exports.ocr = async (req, res, next) => {
     await unlinkAsync(image.path)
     res.json({ status, errorMsg, result: creditCard })
   } catch (errorMsg) {
+    console.log('errorMsg', errorMsg)
     if (errorMsg !== 'no have image') {
       await unlinkAsync(image.path)
     }
