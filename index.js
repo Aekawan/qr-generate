@@ -8,6 +8,7 @@ const pdfController = require('./Controller/pdf')
 const creditCardController = require('./Controller/creditCard')
 
 app.use(express.static(__dirname + '/public'));
+app.use(cors());
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
