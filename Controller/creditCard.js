@@ -34,6 +34,7 @@ module.exports.ocr = async (req, res, next) => {
   try {
     if (!image) throw 'no have image'
     const [result = {}] = await client.documentTextDetection(image.path);
+    console.log('result', result);
     const label = R.pathOr('', ['textAnnotations', 0, 'description'])(result);
     const word = label.split('\n')
     const creditCard = word.reduce((acc, item) => {
