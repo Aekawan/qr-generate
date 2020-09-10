@@ -1,4 +1,8 @@
 {
+  "name": "lacarte",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
     "@google-cloud/vision": "^2.1.1",
     "axios": "^0.20.0",
@@ -11,7 +15,7 @@
     "tesseract.js": "^2.1.1"
   },
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon .",
     "run": "node index.js"
   }
 }

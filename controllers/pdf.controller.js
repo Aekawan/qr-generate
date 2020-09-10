@@ -9,14 +9,14 @@ Module._extensions['.png'] = function (module, fn) {
   module._compile('module.exports="data:image/png;base64,' + base64 + '"', fn);
 };
 
-const qrPosition = require('../qr3.json')
-const bg = require('../sticker2-001.png')
+const qrPosition = require('../qr4.json')
+const bg = require('../new_qr_template.png')
 
 module.exports.pdf = async (req, res, next) => {
   var pdfDocument = new PDFDocument;
 
   const url = `http://customer.lacartemenu.com/?res_id=${req.query.id}`;
-  const qrCodeSize = '131x131';
+  const qrCodeSize = '157x157';
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrCodeSize}&data=${url}`;
 
   try {
@@ -31,7 +31,7 @@ module.exports.pdf = async (req, res, next) => {
 
   const createQr = qrPosition.map(({ x, y }) => ({
     image: image,
-    width: 131,
+    width: 157,
     absolutePosition: { x, y }
   }))
 
@@ -51,11 +51,11 @@ module.exports.pdf = async (req, res, next) => {
   })
 
   let qrCodePdf;
-  doc.pipe(qrCodePdf = fs.createWriteStream('qr-code.pdf'), { encoding: 'utf8' });
+  doc.pipe(qrCodePdf = fs.createWriteStream('./assets/pdf/qr-code.pdf'), { encoding: 'utf8' });
 
   doc.end();
 
   qrCodePdf.on('finish', async function () {
-    res.download('qr-code.pdf');
+    res.download('./assets/pdf/qr-code.pdf');
   });
 }
