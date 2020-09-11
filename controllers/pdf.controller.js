@@ -41,13 +41,7 @@ module.exports.pdf = async (req, res, next) => {
       author: 'QR Code',
       subject: 'QR Code',
     },
-    content: [{
-      image: bg,
-      width: 595,
-      absolutePosition: { x: 0, y: 0 }
-    },
-    ...createQr
-    ],
+    content: createQr,
   })
 
   let qrCodePdf;
