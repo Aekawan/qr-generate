@@ -32,7 +32,7 @@ module.exports.pdf = async (req, res, next) => {
   const createQr = qrPosition.map(({ x, y }) => ({
     image: image,
     width: 157,
-    absolutePosition: { x, y }
+    absolutePosition: { x: x + 0.288, y: y + 0.379 }
   }))
 
   var doc = pdfDocument.createPdfKitDocument({
