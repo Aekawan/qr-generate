@@ -17,10 +17,10 @@ module.exports.pdf = async (req, res, next) => {
 
   const fontDescriptors = {
     Roboto: {
-      normal: path.join(__dirname, '..', 'assets', '/fonts/Roboto-Regular.ttf'),
-      bold: path.join(__dirname, '..', 'assets', '/fonts/Roboto-Medium.ttf'),
-      italics: path.join(__dirname, '..', 'assets', '/fonts/Roboto-Italic.ttf'),
-      bolditalics: path.join(__dirname, '..', 'assets', '/fonts/Roboto-MediumItalic.ttf')
+      normal: path.join(__dirname, '..', 'assets', '/fonts/NotoSansJP-Regular.otf'),
+      bold: path.join(__dirname, '..', 'assets', '/fonts/NotoSansJP-Medium.otf'),
+      italics: path.join(__dirname, '..', 'assets', '/fonts/NotoSansJP-Regular.otf'),
+      bolditalics: path.join(__dirname, '..', 'assets', '/fonts/NotoSansJP-Regular.otf')
     }
   };
 
