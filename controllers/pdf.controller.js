@@ -3,6 +3,7 @@ const axios = require('axios')
 const path = require('path')
 var Module = require('module');
 var fs = require('fs');
+const R = require('ramda');
 
 Module._extensions['.png'] = function (module, fn) {
   var base64 = fs.readFileSync(fn).toString('base64');
@@ -13,9 +14,22 @@ const qrPosition = require('../qr4.json')
 const bg = require('../new_qr_template.png')
 
 module.exports.pdf = async (req, res, next) => {
-  var pdfDocument = new PDFDocument;
 
-  const url = `http://customer.lacartemenu.com/?res_id=${req.query.id}`;
+  const fontDescriptors = {
+    Roboto: {
+      normal: path.join(__dirname, '..', 'assets', '/fonts/Roboto-Regular.ttf'),
+      bold: path.join(__dirname, '..', 'assets', '/fonts/Roboto-Medium.ttf'),
+      italics: path.join(__dirname, '..', 'assets', '/fonts/Roboto-Italic.ttf'),
+      bolditalics: path.join(__dirname, '..', 'assets', '/fonts/Roboto-MediumItalic.ttf')
+    }
+  };
+
+  var pdfDocument = new PDFDocument(fontDescriptors);
+
+  const id = R.pathOr('', ['query', 'id'])(req);
+  const code = R.pathOr('', ['query', 'code'])(req);
+  const name = R.pathOr('', ['query', 'name'])(req);
+  const url = `http://customer.lacartemenu.com/?res_id=${id}`;
   const qrCodeSize = '157x157';
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrCodeSize}&data=${url}`;
 
@@ -41,7 +55,12 @@ module.exports.pdf = async (req, res, next) => {
       author: 'QR Code',
       subject: 'QR Code',
     },
-    content: createQr,
+    content: [...createQr, {
+      text: `${name} ${code}`,
+      fontSize: 15,
+      absolutePosition: { x: 35, y: 29.79 },
+      alignment: 'center'
+    }],
   })
 
   let qrCodePdf;
