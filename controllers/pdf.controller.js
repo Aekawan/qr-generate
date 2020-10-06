@@ -29,7 +29,8 @@ module.exports.pdf = async (req, res, next) => {
   const id = R.pathOr('', ['query', 'id'])(req);
   const code = R.pathOr('', ['query', 'code'])(req);
   const name = R.pathOr('', ['query', 'name'])(req);
-  const url = `http://customer.lacartemenu.com/?res_id=${id}`;
+  const type = R.pathOr('', ['query', 'type'])(req);
+  const url = type === 'dine-in' ? `http://customer.lacartemenu.com/?res_id=${id}` : `lacartecustomer://main/explore/restaurant/${id}/takeout`;
   const qrCodeSize = '157x157';
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrCodeSize}&data=${url}`;
 
