@@ -33,7 +33,7 @@ module.exports.pdf = async (req, res, next) => {
   const typeTitle = type === 'dine-in' ? 'Dine-in' : 'Take out'
   const url = type === 'dine-in' ? `http://customer.lacartemenu.com/?res_id=${id}` : `https://lacarte.onelink.me/x6nK?pid=QR_code&c=Restaurant%20Takeout&is_retargeting=true&af_dp=lacartecustomer%3A%2F%2Fmain%2Fexplore%2Frestaurant%2F${id}%2Ftakeout`;
   const qrCodeSize = '157x157';
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${qrCodeSize}&data=${url}`;
+  const qrCodeUrl = `http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=${url}&qzone=1&margin=0&size=${qrCodeSize}&ecc=L`;
 
   try {
     var result = await axios.get(qrCodeUrl, {
