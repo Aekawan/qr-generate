@@ -33,11 +33,6 @@ const generateQR = (type, image, title) => {
   // type === 'take out'
   return [
     {
-      image: bg,
-      width: 595,
-      absolutePosition: { x: 0, y: 0 }
-    },
-    {
       image: image,
       width: 240,
       absolutePosition: { x: 55.0709, y: 568.0686 }
