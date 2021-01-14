@@ -63,7 +63,7 @@ module.exports.pdf = async (req, res, next) => {
   const name = R.pathOr('', ['query', 'name'])(req);
   const type = R.pathOr('', ['query', 'type'])(req);
   const typeTitle = type === 'dine-in' ? 'Dine-in' : 'Take out'
-  const url = type === 'dine-in' ? `http://customer.lacartemenu.com/?res_id=${id}` : `https%3A%2F%2Flacarte.onelink.me%2Fx6nK%3Fpid%3DQR_code%26c%3DRestaurant%2FTakeout%26is_retargeting%3Dtrue%26af_dp%3Dlacartecustomer%3A%2F%2Fmain%2Fexplore%2Frestaurant%2F${id}%2Ftakeout`;
+  const url = type === 'dine-in' ? `https://table.eateat.app/?res_id=${id}` : `https%3A%2F%2Flacarte.onelink.me%2Fx6nK%3Fpid%3DQR_code%26c%3DRestaurant%2FTakeout%26is_retargeting%3Dtrue%26af_dp%3Dlacartecustomer%3A%2F%2Fmain%2Fexplore%2Frestaurant%2F${id}%2Ftakeout`;
   const qrCodeSize = type === 'dine-in' ? '157x157' : '240x240';
   const qrCodeUrl = `http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=${url}&qzone=1&margin=0&size=${qrCodeSize}&ecc=L`;
   const title = `${name} ${code} ${typeTitle}`
@@ -74,6 +74,7 @@ module.exports.pdf = async (req, res, next) => {
   } catch (err) {
     return next(err.message)
   }
+
 
   var image = new Buffer.from(result.data, 'base64')
 
